@@ -1,9 +1,21 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@600;700&display=swap");
 body {
   background: #292929;
   margin: 0;
-  font-family: 'Fira Sans', sans-serif;
+  font-family: "Fira Sans", sans-serif;
   height: 100vh;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 1025px) {
+  .wrapper {
+    width: 60%;
+    margin: auto;
+  }
 }
 
 ul {
@@ -22,7 +34,6 @@ a {
   left: 0;
   right: 0;
 }
-
 .header a {
   color: white;
 }
@@ -32,15 +43,10 @@ a {
 }
 
 header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   padding: 2em;
 }
-
 header .text-logo {
   font-weight: bold;
   font-size: 20px;
@@ -52,12 +58,10 @@ header .text-logo {
 
 .hero {
   color: white;
-  display: -ms-grid;
   display: grid;
   text-align: center;
   padding: 7em 2em;
 }
-
 .hero .circle {
   width: 200px;
   height: 200px;
@@ -68,29 +72,21 @@ header .text-logo {
   background-size: 150%;
   background-repeat: no-repeat;
   position: relative;
-  display: -ms-grid;
   display: grid;
   margin: 0 auto;
 }
-
 .hero h1 {
   font-weight: bold;
   font-size: 45px;
   line-height: 1.5em;
 }
-
 .hero h1 span {
   color: #D74848;
 }
-
 .hero .button-about {
-  display: -ms-grid;
   display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
-
 .hero .button-about a {
   color: white;
   border: none;
@@ -107,7 +103,6 @@ header .text-logo {
   --webkit-text-fill-color: transparent;
   position: relative;
 }
-
 .hero .button-about a::after {
   content: "";
   background: transparent;
@@ -120,13 +115,10 @@ header .text-logo {
   -webkit-animation: blink 1s steps(24) infinite;
           animation: blink 1s steps(24) infinite;
 }
-
 .hero .button-about a:hover {
   background-position: 200px 0;
-  -webkit-transition: 0.8s ease;
   transition: 0.8s ease;
 }
-
 @-webkit-keyframes blink {
   from {
     border-left: solid 6px #D74848;
@@ -135,7 +127,6 @@ header .text-logo {
     border-left: solid 6px transparent;
   }
 }
-
 @keyframes blink {
   from {
     border-left: solid 6px #D74848;
@@ -150,22 +141,50 @@ section {
   color: white;
 }
 
+.work-experience .wrapper-work-place {
+  display: flex;
+  flex-direction: row;
+}
+.work-experience .wrapper-work-place h2 {
+  font-size: 25px;
+}
+.work-experience .wrapper-work-place a {
+  margin: auto;
+  padding: 1px 0px 0px 4px;
+}
+.work-experience .wrapper-work-place .work-place {
+  font-size: 20px;
+  display: flex;
+  margin: auto 0px auto auto;
+}
+.work-experience .detail-description ul {
+  list-style-type: "✓  " !important;
+  padding: 0 0 0 1em;
+}
+.work-experience .detail-description .header-detail {
+  margin: 4px 0 4px 0;
+}
+.work-experience .detail-description .body-detail {
+  font-size: 15px;
+}
+.work-experience span,
+.work-experience a {
+  color: #D74848;
+}
+
 .about h2 {
   font-weight: 700;
   font-size: 25px;
 }
-
 .about h2 span {
   color: #D74848;
 }
-
 .about p {
   font-weight: 600;
   font-size: 20px;
   letter-spacing: 0.5px;
   line-height: 1.2em;
 }
-
 .about p span {
   color: #D74848;
 }
@@ -174,16 +193,13 @@ section {
   position: relative;
   text-align: center;
 }
-
 .project h1 {
   font-weight: 700;
   font-size: 45px;
 }
-
 .project h1 span {
   color: #D74848;
 }
-
 .project .following {
   position: absolute;
   top: 60%;
@@ -195,62 +211,37 @@ section {
 }
 
 .social {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   padding: 2em;
   height: 50vh;
 }
-
 .social ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .social ul a {
   color: #D74848;
   padding: 0 1em;
   border: 1px solid white;
   width: 50px;
   height: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   border-radius: 10px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   margin: 10px;
 }
-
 .social ul a:hover {
   color: white;
-  -webkit-transform: translateY(-20px);
-          transform: translateY(-20px);
-  -webkit-transition: 0.7s ease;
+  transform: translateY(-20px);
   transition: 0.7s ease;
 }
 
 footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
-
 footer p {
   color: white;
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
